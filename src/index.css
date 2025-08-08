@@ -17,8 +17,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 158 100% 27%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -26,8 +26,8 @@ All colors MUST be HSL.
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 100% 54%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -65,8 +65,8 @@ All colors MUST be HSL.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 158 100% 35%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -74,8 +74,8 @@ All colors MUST be HSL.
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 45 100% 54%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -106,8 +106,15 @@ All colors MUST be HSL.
 
 /* Extended design tokens (HSL only) */
 :root {
-  --brand: 258 90% 62%; /* violet */
-  --brand-2: 192 94% 44%; /* cyan */
+  /* South African palette */
+  --brand: 158 100% 27%; /* SA green */
+  --brand-2: 231 100% 29%; /* SA blue */
+  --flag-green: 158 100% 27%;
+  --flag-yellow: 45 100% 54%;
+  --flag-red: 3 73% 53%;
+  --flag-blue: 231 100% 29%;
+  --flag-black: 0 0% 0%;
+  --flag-white: 0 0% 100%;
   --cta-foreground: 0 0% 100%;
 
   --surface-elev: 0 0% 100% / 0.6;
@@ -123,13 +130,20 @@ All colors MUST be HSL.
 @layer utilities {
   .bg-hero {
     background-image:
-      radial-gradient(1200px 600px at 20% -10%, hsl(var(--brand) / 0.23), transparent 60%),
-      radial-gradient(1000px 500px at 120% 10%, hsl(var(--brand-2) / 0.20), transparent 60%),
+      radial-gradient(1200px 600px at 20% -10%, hsl(var(--flag-green) / 0.23), transparent 60%),
+      radial-gradient(1000px 500px at 120% 10%, hsl(var(--flag-blue) / 0.20), transparent 60%),
+      radial-gradient(800px 400px at 80% -5%, hsl(var(--flag-yellow) / 0.18), transparent 60%),
+      radial-gradient(900px 450px at 50% 100%, hsl(var(--flag-red) / 0.18), transparent 60%),
       linear-gradient(180deg, hsl(var(--background)), hsl(var(--background))); 
   }
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(90deg, hsl(var(--brand)) 0%, hsl(var(--brand-2)) 100%);
+    background-image: linear-gradient(90deg,
+      hsl(var(--flag-green)) 0%,
+      hsl(var(--flag-yellow)) 25%,
+      hsl(var(--flag-red)) 50%,
+      hsl(var(--flag-blue)) 100%
+    );
   }
   .card-elevated {
     box-shadow: var(--shadow-elegant);
