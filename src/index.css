@@ -103,3 +103,37 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Extended design tokens (HSL only) */
+:root {
+  --brand: 258 90% 62%; /* violet */
+  --brand-2: 192 94% 44%; /* cyan */
+  --cta-foreground: 0 0% 100%;
+
+  --surface-elev: 0 0% 100% / 0.6;
+  --shadow-elegant: 0 20px 40px -12px hsl(var(--brand) / 0.35);
+}
+
+.dark {
+  --cta-foreground: 0 0% 100%;
+  --surface-elev: 222.2 84% 4.9% / 0.5;
+  --shadow-elegant: 0 20px 40px -12px hsl(var(--brand) / 0.5);
+}
+
+@layer utilities {
+  .bg-hero {
+    background-image:
+      radial-gradient(1200px 600px at 20% -10%, hsl(var(--brand) / 0.23), transparent 60%),
+      radial-gradient(1000px 500px at 120% 10%, hsl(var(--brand-2) / 0.20), transparent 60%),
+      linear-gradient(180deg, hsl(var(--background)), hsl(var(--background))); 
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, hsl(var(--brand)) 0%, hsl(var(--brand-2)) 100%);
+  }
+  .card-elevated {
+    box-shadow: var(--shadow-elegant);
+    backdrop-filter: saturate(140%) blur(8px);
+    background-color: hsl(var(--surface-elev));
+  }
+}
