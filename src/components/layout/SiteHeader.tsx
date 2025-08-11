@@ -24,6 +24,7 @@ export const SiteHeader = () => {
           <NavLink to="/dashboard" className={({isActive}) => isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"}>{t("nav.dashboard")}</NavLink>
           <NavLink to="/forum" className={({isActive}) => isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"}>{t("nav.forum")}</NavLink>
           <NavLink to="/visualizer" className={({isActive}) => isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"}>{t("nav.visualizer")}</NavLink>
+          <NavLink to="/ledger" className={({isActive}) => isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"}>Ledger</NavLink>
           <NavLink to="/feedback" className={({isActive}) => isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"}>{t("nav.feedback")}</NavLink>
         </nav>
         <div className="flex items-center gap-3">

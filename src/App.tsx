@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import Forum from "./pages/Forum";
 import Visualizer from "./pages/Visualizer";
 import Feedback from "./pages/Feedback";
+import Ledger from "./pages/Ledger";
 import { SiteHeader } from "./components/layout/SiteHeader";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/forum" element={<Forum />} />
           <Route path="/visualizer" element={<Visualizer />} />
+          <Route path="/ledger" element={<Ledger />} />
           <Route path="/feedback" element={<Feedback />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { AIAssistant } from "@/components/ai/AIAssistant";
+import { VotePanel } from "@/components/voting/VotePanel";
 
 interface Bill {
   id: string;
@@ -99,6 +100,7 @@ const Dashboard = () => {
                     <Button variant="secondary">Read more</Button>
                     <Button variant="hero">Ask AI about this bill</Button>
                   </div>
+                  <VotePanel lawId={b.id} lawTitle={b.title} />
                 </CardContent>
               </Card>
             ))}
