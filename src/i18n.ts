@@ -4,7 +4,7 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      appName: "Voice of the People",
+      appName: "Thuma Mina Voice",
       nav: { dashboard: "Dashboard", forum: "Forum", visualizer: "Impact", feedback: "Feedback", signIn: "Sign in" },
       hero: {
         title: "Understand and influence laws",
@@ -16,7 +16,7 @@ const resources = {
   },
   es: {
     translation: {
-      appName: "Voz del Pueblo",
+      appName: "Thuma Mina Voice",
       nav: { dashboard: "Panel", forum: "Foro", visualizer: "Impacto", feedback: "Opinión", signIn: "Iniciar sesión" },
       hero: {
         title: "Comprende e influye en las leyes",
@@ -28,7 +28,7 @@ const resources = {
   },
   fr: {
     translation: {
-      appName: "Voix du Peuple",
+      appName: "Thuma Mina Voice",
       nav: { dashboard: "Tableau", forum: "Forum", visualizer: "Impact", feedback: "Retour", signIn: "Se connecter" },
       hero: {
         title: "Comprendre et influencer les lois",

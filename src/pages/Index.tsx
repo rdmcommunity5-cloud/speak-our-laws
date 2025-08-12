@@ -21,7 +21,7 @@ const Index = () => {
           </div>
         </div>
         <div className="relative">
-          <img src={hero} alt="Voice of the People hero illustration showing AI avatar helping citizens understand laws" className="w-full h-auto rounded-lg shadow-xl" loading="lazy" />
+          <img src={hero} alt="Thuma Mina Voice hero illustration showing AI avatar helping citizens understand laws" className="w-full h-auto rounded-lg shadow-xl" loading="lazy" />
         </div>
       </section>
     </main>
